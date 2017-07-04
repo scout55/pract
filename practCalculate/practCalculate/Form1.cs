@@ -21,12 +21,19 @@ namespace practCalculate
             InitializeComponent();
         }
 
-        private void buttonClick(object sender, EventArgs e)
+        private void buttonClickTwoArgs(object sender, EventArgs e)
         {
             numberFirst = Convert.ToDouble(textBox1.Text);
             numberSecond = Convert.ToDouble(textBox2.Text);
             ITwoArgCalc calculator = TwoArgumentsFactory.createCalculator(((Button)sender).Name);
             result = calculator.Calculate(numberFirst, numberSecond);
+            label1.Text = Convert.ToString(result);
+        }
+        private void buttonClickOneArg(object sender, EventArgs e)
+        {
+            numberFirst = Convert.ToDouble(textBox1.Text);
+            IOneArgCalc calculator = OneArgFactory.createCalculator(((Button)sender).Name);
+            result = calculator.Calculate(numberFirst);
             label1.Text = Convert.ToString(result);
         }
     }
