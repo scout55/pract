@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
+using practCalculate.OneArgFactory;
+
 namespace practCalculate.Tests.OneArgTests
 {
 
@@ -18,6 +20,12 @@ namespace practCalculate.Tests.OneArgTests
             var cosCalculator = new SqrtCalc();
             var result = cosCalculator.Calculate(arg);
             Assert.AreEqual(result, expected, 0.0001);
+        }
+        [TestCase(-5)]
+        public void ExceptionTests(double arg)
+        {
+            var calculator = new SqrtCalc();
+            Assert.Throws<Exception>(() => calculator.Calculate(arg));
         }
     }
 }

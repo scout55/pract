@@ -1,16 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace practCalculate
+namespace practCalculate.OneArgFactory
 {
     public class TgCalc:IOneArgCalc
     {
-        public double Calculate(double Arg)
+        public double Calculate(double arg)
         {
-            return Math.Tan(Arg);
+            if (arg == Math.PI / 2 || arg == 3*Math.PI/2)
+            {
+                throw new Exception("Argument is bad.");
+
+            }
+            return Math.Tan(arg);
         }
     }
 }

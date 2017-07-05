@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
+using practCalculate.TwoArgFactory;
 
 namespace practCalculate.Tests.TwoArgTests
 {
@@ -19,6 +20,12 @@ namespace practCalculate.Tests.TwoArgTests
             var calculator = new DivisionCalc();
             var result = calculator.Calculate(firstArg, secondArg);
             Assert.AreEqual(result, expected, 0.0001);
+        }
+        [TestCase(-2, 0)]
+        public void ExceptionTests(double firstArg, double secondArg)
+        {
+            var calculator = new DivisionCalc();
+            Assert.Throws<Exception>(() => calculator.Calculate(firstArg, secondArg));
         }
     }
 

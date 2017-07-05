@@ -1,17 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace practCalculate
+namespace practCalculate.TwoArgFactory
 {
   public  class DivisionCalc : ITwoArgCalc
     {
         public double Calculate(double firstArg, double secondArg)
         {
-            double result;
-            result = firstArg / secondArg;
+            if (secondArg == 0)
+            {
+                throw new Exception("Second argument is bad.");
+
+            }
+            double result = firstArg / secondArg;
+
             return result;
         }
     }

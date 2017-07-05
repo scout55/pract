@@ -1,16 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace practCalculate
+namespace practCalculate.OneArgFactory
 {
     public class SqrtCalc : IOneArgCalc
     {
-        public double Calculate(double Arg)
+        public double Calculate(double arg)
         {
-            return Math.Sqrt(Arg);
+            if (arg <0)
+            {
+                throw new Exception("Argument is bad.");
+
+            }
+            return Math.Sqrt(arg);
         }
     }
 }

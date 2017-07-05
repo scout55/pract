@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using practCalculate.OneArgFactory;
+using practCalculate.TwoArgFactory;
 
 namespace practCalculate
 {
@@ -32,7 +34,7 @@ namespace practCalculate
         private void buttonClickOneArg(object sender, EventArgs e)
         {
             numberFirst = Convert.ToDouble(textBox1.Text);
-            IOneArgCalc calculator = OneArgFactory.createCalculator(((Button)sender).Name);
+            IOneArgCalc calculator = OneArgFactory.OneArgFactory.createCalculator(((Button)sender).Name);
             result = calculator.Calculate(numberFirst);
             label1.Text = Convert.ToString(result);
         }

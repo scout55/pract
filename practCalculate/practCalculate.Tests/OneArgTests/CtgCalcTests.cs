@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
+using practCalculate.OneArgFactory;
+
 namespace practCalculate.Tests.OneArgTests
 {
 
@@ -18,6 +20,14 @@ namespace practCalculate.Tests.OneArgTests
             var calculator = new CtgCalc();
             var result = calculator.Calculate(arg);
             Assert.AreEqual(result, expected, 0.0001);
+        }
+
+        [TestCase(Math.PI)]
+        [TestCase(0)]
+        public void ExceptionTests(double arg)
+        {
+            var calculator = new CtgCalc();
+            Assert.Throws<Exception>(() => calculator.Calculate(arg));
         }
     }
 }

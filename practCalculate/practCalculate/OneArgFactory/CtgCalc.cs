@@ -1,17 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace practCalculate
+namespace practCalculate.OneArgFactory
 {
-    public class CtgCalc:IOneArgCalc
+    public class CtgCalc : IOneArgCalc
     {
-        public double Calculate(double Arg)
+        public double Calculate(double arg)
         {
-            double temp = Math.Tan(Arg);
-            return Math.Pow(temp,-1);
+            if (arg == 0 || arg == Math.PI)
+            {
+                throw new Exception("Argument is bad.");
+
+            }
+            double temp = Math.Tan(arg);
+            return Math.Pow(temp, -1);
+
         }
     }
 }
