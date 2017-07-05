@@ -20,6 +20,10 @@ namespace practCalculate
                     return new MultiplyCalc();
                 case "btnDiv":
                     return new DivisionCalc();
+                case "btnPow":
+                    return new PowCalc();
+                case "btnLog":
+                    return new LogCalc();
                 default:
                     throw new Exception("Неизвестная операция");
             }
