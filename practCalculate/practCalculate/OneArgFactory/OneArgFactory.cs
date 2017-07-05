@@ -12,13 +12,13 @@ namespace practCalculate
         {
             switch (calcName)
             {
-                case "button5":
+                case "btnSin":
                     return new SinCalc();
-                case "button6":
+                case "btnCos":
                     return new CosCalc();
-                case "button7":
+                case "btnExp":
                     return new ExpCalc();
-                case "button8":
+                case "btnSqrt":
                     return new SqrtCalc();
                 default:
                     throw new Exception("Неизвестная операция");

@@ -12,13 +12,13 @@ namespace practCalculate
         {
             switch (calcName)
             {
-                case "button1":
+                case "btnAdd":
                     return new AdditionCalc();
-                case "button2":
+                case "btnSub":
                     return new SubstractionCalc();
-                case "button3":
+                case "btnMult":
                     return new MultiplyCalc();
-                case "button4":
+                case "btnDiv":
                     return new DivisionCalc();
                 default:
                     throw new Exception("Неизвестная операция");
