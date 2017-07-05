@@ -44,8 +44,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="CosCalcTests.cs" />
+    <Compile Include="OneArgTests\CosCalcTests.cs" />
+    <Compile Include="OneArgTests\CtgCalcTests.cs" />
+    <Compile Include="OneArgTests\ExpCalcTests.cs" />
+    <Compile Include="OneArgTests\IOneArgCalcTests.cs" />
+    <Compile Include="OneArgTests\LnCalcTests.cs" />
+    <Compile Include="OneArgTests\OneArgFactoryTests.cs" />
+    <Compile Include="OneArgTests\ReverseCalcTests.cs" />
+    <Compile Include="OneArgTests\SinCalcTests.cs" />
+    <Compile Include="OneArgTests\SqrtCalcTests.cs" />
+    <Compile Include="OneArgTests\TgCalcTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

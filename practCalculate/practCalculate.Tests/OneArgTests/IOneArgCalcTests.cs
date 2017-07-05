@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace practCalculate.Tests
+namespace practCalculate.Tests.OneArgTests
 {
-    public class Class1
+    class IOneArgCalcTests
     {
     }
 }
