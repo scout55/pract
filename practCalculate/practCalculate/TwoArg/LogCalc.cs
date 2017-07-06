@@ -1,7 +1,10 @@
 ﻿using System;
 
-namespace practCalculate.TwoArgFactory
+namespace practCalculate.TwoArg
 {
+    /// <summary>
+    /// Class for calculate LOGa(b).
+    /// </summary>
     public class LogCalc:ITwoArgCalc
     {
         public double Calculate(double firstArg, double secondArg)

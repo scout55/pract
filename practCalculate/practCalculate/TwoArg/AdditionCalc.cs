@@ -1,5 +1,8 @@
-﻿namespace practCalculate.TwoArgFactory
+﻿namespace practCalculate.TwoArg
 {
+    /// <summary>
+    /// Class for calculate addition.
+    /// </summary>
    public class AdditionCalc:ITwoArgCalc
     {
         public double Calculate(double firstArg,double secondArg)

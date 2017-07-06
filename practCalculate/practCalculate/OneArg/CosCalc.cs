@@ -1,7 +1,10 @@
 ﻿using System;
 
-namespace practCalculate.OneArgFactory
+namespace practCalculate.OneArg
 {
+    /// <summary>
+    /// Class for calculate cos(x).
+    /// </summary>
     public class CosCalc : IOneArgCalc
     {
         public double Calculate(double Arg)

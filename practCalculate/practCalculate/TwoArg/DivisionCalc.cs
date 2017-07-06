@@ -1,8 +1,11 @@
 ﻿using System;
 
-namespace practCalculate.TwoArgFactory
+namespace practCalculate.TwoArg
 {
-  public  class DivisionCalc : ITwoArgCalc
+    /// <summary>
+    /// Class for calculate division.
+    /// </summary>
+    public class DivisionCalc : ITwoArgCalc
     {
         public double Calculate(double firstArg, double secondArg)
         {

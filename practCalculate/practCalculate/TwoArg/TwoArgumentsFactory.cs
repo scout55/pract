@@ -1,9 +1,16 @@
 ﻿using System;
 
-namespace practCalculate.TwoArgFactory
+namespace practCalculate.TwoArg
 {
-    public  class TwoArgumentsFactory
+    public class TwoArgumentsFactory
     {
+        /// <summary>
+        /// A factory that instantiates a class by the name of a button.
+        /// </summary>
+        /// <param name="calcName">
+        ///  <see cref="string"/> value here.</param>
+        /// <returns> Return the Instance of a class. </returns>
+
         public static ITwoArgCalc createCalculator(string calcName)
         {
             switch (calcName)

@@ -1,7 +1,10 @@
 ﻿using System;
 
-namespace practCalculate.TwoArgFactory
+namespace practCalculate.TwoArg
 {
+    /// <summary>
+    /// Class for calculate power A of B.
+    /// </summary>
     public class PowCalc:ITwoArgCalc
     {
         public double Calculate(double firstArg,double secondArg)

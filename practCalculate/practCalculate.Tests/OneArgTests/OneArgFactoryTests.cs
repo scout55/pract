@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
-using practCalculate.OneArgFactory;
+using practCalculate.OneArg;
 
 namespace practCalculate.Tests.OneArgTests
 {
@@ -22,8 +22,15 @@ namespace practCalculate.Tests.OneArgTests
         [TestCase("btnReverse", typeof(ReverseCalc))]
         public void CalculateTest(string arg, Type type)
         {
-            var calculator = OneArgFactory.OneArgFactory.createCalculator(arg);
-            Assert.IsInstanceOf(type,calculator);
+            var calculator = OneArgFactory.createCalculator(arg);
+            Assert.IsInstanceOf(type, calculator);
         }
-    }
+
+        [TestCase("Btnasdasd")]
+        public void ExceptionTest(string arg)
+        {
+            Assert.Throws<Exception>(() => OneArgFactory.createCalculator(arg));
+        }
+
+}
 }

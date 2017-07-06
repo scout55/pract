@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
-using practCalculate.OneArgFactory;
+using practCalculate.OneArg;
 
 namespace practCalculate.Tests.OneArgTests
 {

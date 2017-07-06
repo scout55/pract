@@ -1,8 +1,11 @@
 ﻿using System;
 
-namespace practCalculate.OneArgFactory
+namespace practCalculate.OneArg
 {
-    public class SqrtCalc : IOneArgCalc
+    /// <summary>
+    /// Class for calculate ln(x).
+    /// </summary>
+    public class LnCalc:IOneArgCalc
     {
         public double Calculate(double arg)
         {
@@ -11,7 +14,7 @@ namespace practCalculate.OneArgFactory
                 throw new Exception("Argument is bad.");
 
             }
-            return Math.Sqrt(arg);
+            return Math.Log(arg);
         }
     }
 }

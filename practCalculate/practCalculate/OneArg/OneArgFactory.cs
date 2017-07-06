@@ -1,10 +1,14 @@
 ﻿using System;
 
-namespace practCalculate.OneArgFactory
+namespace practCalculate.OneArg
 {
-
     public class OneArgFactory
     {
+        /// <summary>
+        /// A factory that instantiates a class by the name of a button.
+        /// </summary>
+        /// <param name="calcName"> <see cref="string"/> value here.</param>
+        /// <returns> Return the Instance of a class. </returns>
         public static IOneArgCalc createCalculator(string calcName)
         {
             switch (calcName)

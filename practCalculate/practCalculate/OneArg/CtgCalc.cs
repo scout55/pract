@@ -1,7 +1,10 @@
 ﻿using System;
 
-namespace practCalculate.OneArgFactory
+namespace practCalculate.OneArg
 {
+    /// <summary>
+    /// Class for calculate tg(x).
+    /// </summary>
     public class CtgCalc : IOneArgCalc
     {
         public double Calculate(double arg)
