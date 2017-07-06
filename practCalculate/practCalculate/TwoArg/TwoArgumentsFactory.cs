@@ -9,7 +9,7 @@ namespace practCalculate.TwoArg
         /// </summary>
         /// <param name="calcName">
         ///  <see cref="string"/> value here.</param>
-        /// <returns> Return the Instance of a class. </returns>
+        /// <returns> Return the instance of a class. </returns>
 
         public static ITwoArgCalc createCalculator(string calcName)
         {

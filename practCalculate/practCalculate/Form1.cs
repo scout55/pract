@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using practCalculate.OneArg;
 using practCalculate.TwoArg;
@@ -14,6 +7,9 @@ namespace practCalculate
 {
     public partial class Form1 : Form
     {
+        /// <summary>
+        /// freecodecamp.org
+        /// </summary>
         double _numberFirst;
         double _numberSecond;
         double _result;
@@ -27,15 +23,18 @@ namespace practCalculate
         {
             if (e.KeyChar == '.' || e.KeyChar == ',')
             {
-                if (textBox1.Text.IndexOf('.') != -1)
+                if (((TextBox)sender).Text.IndexOf('.') != -1)
                 {
                     e.Handled = true;
                 }
                 e.KeyChar = '.';
             }
+            if (e.KeyChar == '-')
+                if (((TextBox)sender).Text.IndexOf('-') != -1)
+                    e.Handled = true;
+
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != '-')
                 e.Handled = true;
-
         }
 
 
@@ -45,7 +44,6 @@ namespace practCalculate
             {
                 _numberFirst = Convert.ToDouble(textBox1.Text);
                 _numberSecond = Convert.ToDouble(textBox2.Text);
-
                 ITwoArgCalc calculator = TwoArgumentsFactory.createCalculator(((Button)sender).Name);
                 _result = calculator.Calculate(_numberFirst, _numberSecond);
                 label1.Text = _result.ToString();
@@ -63,7 +61,7 @@ namespace practCalculate
             try
             {
                 _numberFirst = Convert.ToDouble(textBox1.Text);
-                IOneArgCalc calculator = OneArgFactory.createCalculator(((Button) sender).Name);
+                IOneArgCalc calculator = OneArgFactory.createCalculator(((Button)sender).Name);
                 _result = calculator.Calculate(_numberFirst);
                 label1.Text = Convert.ToString(_result);
             }
