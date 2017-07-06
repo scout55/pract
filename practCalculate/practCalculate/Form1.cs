@@ -23,20 +23,39 @@ namespace practCalculate
             InitializeComponent();
         }
 
-        private void buttonClickTwoArgs(object sender, EventArgs e)
+        private void ButtonClickTwoArgs(object sender, EventArgs e)
         {
-            _numberFirst = Convert.ToDouble(textBox1.Text);
-            _numberFirst = Convert.ToDouble(textBox2.Text);
-            ITwoArgCalc calculator = TwoArgumentsFactory.createCalculator(((Button)sender).Name);
-            _result = calculator.Calculate(_numberFirst, _numberFirst);
-            label1.Text = Convert.ToString(_result);
+            try
+            {
+                _numberFirst = Convert.ToDouble(textBox1.Text);
+
+                _numberSecond = Convert.ToDouble(textBox2.Text);
+                ITwoArgCalc calculator = TwoArgumentsFactory.createCalculator(((Button)sender).Name);
+                _result = calculator.Calculate(_numberFirst, _numberSecond);
+                label1.Text = _result.ToString();
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("Error: " + exc.Message);
+
+            }
         }
-        private void buttonClickOneArg(object sender, EventArgs e)
+
+
+        private void ButtonClickOneArg(object sender, EventArgs e)
         {
-            _numberFirst = Convert.ToDouble(textBox1.Text);
-            IOneArgCalc calculator = OneArgFactory.createCalculator(((Button)sender).Name);
-            _result = calculator.Calculate(_numberFirst);
-            label1.Text = Convert.ToString(_result);
+            try
+            {
+                _numberFirst = Convert.ToDouble(textBox1.Text);
+                IOneArgCalc calculator = OneArgFactory.createCalculator(((Button) sender).Name);
+                _result = calculator.Calculate(_numberFirst);
+                label1.Text = Convert.ToString(_result);
+            }
+            catch (Exception exc)
+            {
+                MessageBox.Show("Error: " + exc.Message);
+
+            }
         }
     }
 }

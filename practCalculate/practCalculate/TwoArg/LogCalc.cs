@@ -19,8 +19,8 @@ namespace practCalculate.TwoArg
                 throw new Exception("Second argument is bad.");
 
             }
-            double temp = Math.Log(secondArg) / Math.Log(firstArg);
-            return temp;
+
+            return Math.Log(firstArg) / Math.Log(secondArg);
         }
     }
 }

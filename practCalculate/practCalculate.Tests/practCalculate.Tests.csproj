@@ -47,7 +47,6 @@
     <Compile Include="OneArgTests\CosCalcTests.cs" />
     <Compile Include="OneArgTests\CtgCalcTests.cs" />
     <Compile Include="OneArgTests\ExpCalcTests.cs" />
-    <Compile Include="OneArgTests\IOneArgCalcTests.cs" />
     <Compile Include="OneArgTests\LnCalcTests.cs" />
     <Compile Include="OneArgTests\OneArgFactoryTests.cs" />
     <Compile Include="OneArgTests\ReverseCalcTests.cs" />

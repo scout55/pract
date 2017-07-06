@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Forms;
 
 namespace practCalculate.TwoArg
 {
@@ -9,14 +10,12 @@ namespace practCalculate.TwoArg
     {
         public double Calculate(double firstArg, double secondArg)
         {
-            if (secondArg == 0)
-            {
-                throw new Exception("Second argument is bad.");
-
-            }
-            double result = firstArg / secondArg;
-
-            return result;
+                if (secondArg == 0)
+                {
+                    throw new Exception("Second argument is bad.");
+                }
+                double result = firstArg / secondArg;
+                return result;
         }
     }
 }
