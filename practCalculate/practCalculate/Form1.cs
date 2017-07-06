@@ -23,13 +23,29 @@ namespace practCalculate
             InitializeComponent();
         }
 
+        private void PressKey(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == '.' || e.KeyChar == ',')
+            {
+                if (textBox1.Text.IndexOf('.') != -1)
+                {
+                    e.Handled = true;
+                }
+                e.KeyChar = '.';
+            }
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != '-')
+                e.Handled = true;
+
+        }
+
+
         private void ButtonClickTwoArgs(object sender, EventArgs e)
         {
             try
             {
                 _numberFirst = Convert.ToDouble(textBox1.Text);
-
                 _numberSecond = Convert.ToDouble(textBox2.Text);
+
                 ITwoArgCalc calculator = TwoArgumentsFactory.createCalculator(((Button)sender).Name);
                 _result = calculator.Calculate(_numberFirst, _numberSecond);
                 label1.Text = _result.ToString();
